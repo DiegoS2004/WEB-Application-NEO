@@ -1,0 +1,113 @@
+.nav-bar-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-gray-400);
+  width: 2115px;
+  height: 117.2px;
+}
+.span {
+  color: var(--black-900);
+}
+.about,
+.span {
+  white-space: pre-wrap;
+}
+.videogame {
+  color: var(--black-900);
+}
+.contact {
+  white-space: pre-wrap;
+}
+.home-about-resource-container,
+.neoris {
+  position: absolute;
+  top: 38px;
+  left: 862px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 1047.2px;
+  height: 35.2px;
+}
+.neoris {
+  top: 33.2px;
+  left: 77.8px;
+  font-size: var(--font-size-21xl);
+  width: 223.3px;
+  height: 47.7px;
+}
+.nav-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2115px;
+  height: 117.2px;
+}
+.videogame-page-child {
+  position: absolute;
+  top: 196px;
+  left: 186px;
+  background-color: var(--color-gainsboro-200);
+  width: 1743px;
+  height: 938px;
+}
+.videogame-page-item {
+  position: absolute;
+  top: 550px;
+  left: 952px;
+  width: 212px;
+  height: 220px;
+  object-fit: contain;
+}
+.search-btn-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-white);
+  width: 148px;
+  height: 45.2px;
+}
+.search {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 92.3px;
+  height: 27.9px;
+}
+.icon-search {
+  position: absolute;
+  height: 44.25%;
+  width: 13.51%;
+  top: 26.55%;
+  right: 8.11%;
+  bottom: 29.2%;
+  left: 78.38%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.search-btn {
+  position: absolute;
+  top: 36px;
+  left: 1898px;
+  width: 148px;
+  height: 45.2px;
+  font-size: var(--font-size-xl);
+  color: var(--black-900);
+}
+.videogame-page {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  height: 1320px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-6xl);
+  color: var(--color-white);
+  font-family: var(--font-ubuntu);
+}
