@@ -19,6 +19,19 @@
 .contact {
   white-space: pre-wrap;
 }
+.videogame-page {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  height: 1320px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-6xl);
+  color: var(--color-white);
+  font-family: var(--font-ubuntu);
+  transform: scale(0.9995);
+}
+
 .home-about-resource-container,
 .neoris {
   position: absolute;

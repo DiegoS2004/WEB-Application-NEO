@@ -84,6 +84,28 @@
   bottom: 0;
   font-family: var(--font-plus-jakarta-sans);
 }
+.container {
+  width: 75%;
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  transform: scale(10); /* Apply scaling */
+}
+.content-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: scale(10); /* Apply scaling */
+}
+.main-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transform: scale(10); /* Apply scaling */
+}
 .contact-us,
 .help-center,
 .report-a-problem,
@@ -177,6 +199,9 @@
 .service-terms,
 .vision {
   margin: 0;
+}
+body {
+  zoom: 1.3599999995;
 }
 .vision-articles-careers-container {
   position: absolute;
