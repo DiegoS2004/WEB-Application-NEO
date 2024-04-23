@@ -1,53 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
-
     <link rel="stylesheet" href="./global.css" />
     <link rel="stylesheet" href="./videogame-page.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Font Awesome 6 Pro:wght@400&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:wght@400;700&display=swap"
-    />
-  </head>
-  <body>
-    <div class="videogame-page">
-      <div class="nav-bar">
-        <div class="nav-bar-child"></div>
-        <div class="home-about-resource-container">
-          <a href="courses.html"><span>Home</span></a>
-          <span class="span"> </span>
-          <span class="about">About Resource courses </span>
-          <span class="videogame">Videogame</span>
-          <span class="contact"> contact</span>
-        </div><a href="courses.html"><span>Home</span></a>
-        <b class="neoris">NEORIS</b>
-      </div>
-      <div class="videogame-page-child"></div>
-      <img class="videogame-page-item" alt="" src="./public/polygon-1.svg" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Font Awesome 6 Pro:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:wght@400;700&display=swap" />
+</head>
+<body>
+    <!-- Header de la página de cursos -->
+    <nav class="nav-bar">
+        <img src="/public/website-logo-1@2x.png" alt="logo-neoris">
+        <ul class="nav-bar--lista">
+            <li class="nav-bar--middle">Home</li>
+            <li class="nav-bar--middle">Courses</li>
+            <li class="nav-bar--middle">Avatar</li>
+            <li class="nav-bar--middle"><a href="desktop.html">Login</a></li>
+        </ul>
+    </nav>
 
-      <div class="search-btn">
-        <div class="search-btn-child"></div>
-        <b class="search">SEARCH</b>
-        <img class="icon-search" alt="" src="./public/-icon-search.svg" />
-      </div>
+    <!-- Contenedor del juego de Unity -->
+    <div class="videogame-container">
+        <iframe src="Pongussy/index.html" frameborder="0"></iframe>
     </div>
-  </body>
+
+    <!-- Footer de la página de cursos -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <img src="/public/website-logo-1@2x.png" alt="Logo Neoris" class="footer-logo">
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <p>© 2024 Neoris. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
 </html>

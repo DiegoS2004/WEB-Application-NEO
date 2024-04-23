@@ -1,23 +1,196 @@
-.nav-bar-child {
+/* Estilos básicos */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos del header */
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1B242A; /* Azul por ejemplo */
+  padding: 10px 20px;
+  color: white;
+  text-align: center;
+}
+.nav-bar img {
+  height: 50px; /* Ajusta según necesidad */
+  margin-bottom: 10px; /* Espacio después del logo */
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.nav-bar--middle {
+  padding: 5px 0; /* Espacio arriba y abajo para mejorar la tocabilidad */
+  cursor: pointer;
+  width: 100%; /* Hace que cada elemento de la lista ocupe todo el ancho */
+  text-align: center;
+}
+
+.search {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.unity-game-container {
+  width: 100vw; /* 100% de la anchura de la ventana del navegador */
+  height: 100vh; /* 100% de la altura de la ventana del navegador */
+  display: flex; /* Utiliza Flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+.unity-game-container iframe {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: var(--color-gray-400);
-  width: 2115px;
-  height: 117.2px;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
-.span {
-  color: var(--black-900);
+
+/* Media queries para pantallas más grandes */
+@media (min-width: 768px) {
+  .nav-bar {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .nav-bar .nav-bar--lista{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: auto;
+  }
+
+  .nav-bar--middle {
+      padding: 0 10px; /* Restaura el espaciado horizontal y elimina el vertical */
+      width: auto; /* Restablece el ancho para auto ajustarse al contenido */
+  }
+
+  .search {
+      margin: 0px; /* Elimina el margen superior */
+  }
 }
-.about,
-.span {
-  white-space: pre-wrap;
+
+/* Footer */
+
+/* Estilos del footer */
+.site-footer {
+  background-color: var(--color-gray-400); /* Color de fondo del footer */
+  color: var(--color-white); /* Color del texto */
+  padding: var(--padding-base); /* Ajuste de padding */
+  font-family: var(--font-ubuntu); /* Fuente */
+  text-align: center; /* Alineación del texto */
+  position: fixed; /* Mantener el footer fijo en la parte inferior */
+  bottom: 0; /* Alinear el footer en la parte inferior */
+  width: 100%; /* Ajustar el ancho al 100% del viewport */
 }
-.videogame {
-  color: var(--black-900);
+
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 0 20px; /* Padding lateral */
 }
-.contact {
-  white-space: pre-wrap;
+
+.footer-logo {
+  width: 150px; /* Tamaño del logo */
+  margin-bottom: 20px; /* Espacio debajo del logo */
+}
+
+.footer-links {
+  list-style: none; /* Remover estilos de lista */
+  padding: 0; /* Remover padding */
+  margin-bottom: 20px; /* Espacio debajo de la lista */
+}
+
+.footer-links li {
+  display: inline; /* Mostrar enlaces en línea */
+  margin: 0 10px; /* Espacio horizontal entre enlaces */
+}
+
+.footer-links a {
+  color: #ffffff; /* Color del enlace */
+  text-decoration: none; /* No subrayado */
+  transition: color 0.3s; /* Transición suave al cambiar de color */
+}
+
+.footer-links a:hover {
+  color: #f1c40f; /* Color cuando se pasa el ratón por encima */
+}
+
+/* Mejorar legibilidad y accesibilidad */
+footer p {
+  font-size: 0.875rem; /* Tamaño del texto de los derechos */
+  margin-top: 10px; /* Espacio antes del texto de derechos */
+}
+
+
+
+/* Estilos del footer */
+.site-footer {
+  background-color: var(--color-gray-400); /* Color de fondo del footer */
+  color: var(--color-white); /* Color del texto */
+  padding: var(--padding-base); /* Ajuste de padding */
+  font-family: var(--font-ubuntu); /* Fuente */
+  text-align: center; /* Alineación del texto */
+  position: fixed; /* Mantener el footer fijo en la parte inferior */
+  bottom: 0; /* Alinear el footer en la parte inferior */
+  width: 100%; /* Ajustar el ancho al 100% del viewport */
+  z-index: 1000; /* Asegura que el footer esté por encima de otros elementos */
+}
+
+/* Contenedor del contenido principal */
+.main-content {
+  padding-bottom: var(--padding-base); /* Ajuste de padding para compensar la altura del footer */
+}
+/* Estilos básicos */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh; /* Asegura que el cuerpo tenga al menos el alto de la ventana */
+  position: relative; /* Asegura que los elementos absolutamente posicionados se ajusten al cuerpo *
+
+/* Estilos de la barra de navegación, enfoque Mobile First */
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1B242A; /* Azul por ejemplo */
+  padding: 10px 20px;
+  color: white;
+  text-align: center;
+}
+
+.nav-bar img {
+  height: 50px; /* Ajusta según necesidad */
+  margin-bottom: 10px; /* Espacio después del logo */
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.nav-bar--middle {
+  padding: 5px 0; /* Espacio arriba y abajo para mejorar la tocabilidad */
+  cursor: pointer;
+  width: 100%; /* Hace que cada elemento de la lista ocupe todo el ancho */
+  text-align: center;
+}
+
+.search {
+  cursor: pointer;
+  font-weight: bold;
 }
 .videogame-page {
   width: 100%;
@@ -31,32 +204,31 @@
   font-family: var(--font-ubuntu);
   transform: scale(0.9995);
 }
+/* Media queries para pantallas más grandes */
+@media (min-width: 768px) {
+  .nav-bar {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+  }
 
-.home-about-resource-container,
-.neoris {
-  position: absolute;
-  top: 38px;
-  left: 862px;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  display: inline-block;
-  width: 1047.2px;
-  height: 35.2px;
+  .nav-bar .nav-bar--lista{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: auto;
+  }
+
+  .nav-bar--middle {
+      padding: 0 10px; /* Restaura el espaciado horizontal y elimina el vertical */
+      width: auto; /* Restablece el ancho para auto ajustarse al contenido */
+  }
+
+  .search {
+      margin: 0px; /* Elimina el margen superior */
+  }
 }
-.neoris {
-  top: 33.2px;
-  left: 77.8px;
-  font-size: var(--font-size-21xl);
-  width: 223.3px;
-  height: 47.7px;
-}
-.nav-bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2115px;
-  height: 117.2px;
-}
+
 .videogame-page-child {
   position: absolute;
   top: 196px;
@@ -82,45 +254,28 @@
   width: 148px;
   height: 45.2px;
 }
-.search {
-  position: absolute;
-  top: 10px;
-  left: 14px;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  display: inline-block;
-  width: 92.3px;
-  height: 27.9px;
+
+
+figcaption {
+  padding: 10px;
+  color: black; /* Texto blanco */
+  font-size: 1.1em;
 }
-.icon-search {
-  position: absolute;
-  height: 44.25%;
-  width: 13.51%;
-  top: 26.55%;
-  right: 8.11%;
-  bottom: 29.2%;
-  left: 78.38%;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
+
+figure{
+  margin-bottom: 0px;
 }
-.search-btn {
-  position: absolute;
-  top: 36px;
-  left: 1898px;
-  width: 148px;
-  height: 45.2px;
-  font-size: var(--font-size-xl);
-  color: var(--black-900);
+
+/* Media queries para adaptar a móviles */
+@media (max-width: 768px) {
+  .course-card {
+      width: calc(50% - 20px); /* Dos tarjetas por fila en pantallas pequeñas */
+  }
 }
-.videogame-page {
-  width: 100%;
-  position: relative;
-  background-color: var(--color-white);
-  height: 1320px;
-  overflow: hidden;
-  text-align: left;
-  font-size: var(--font-size-6xl);
-  color: var(--color-white);
-  font-family: var(--font-ubuntu);
+
+@media (max-width: 480px) {
+  .course-card {
+      width: 100%; /* Una tarjeta por fila en pantallas muy pequeñas */
+  }
 }
+
