@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login.css"> <!-- Asegúrate de poner el camino correcto a tu CSS -->
+    <title>Create Account</title>
+</head>
+<body>
+  <div class="images-container">
+    <img class="image-1-icon" alt="" src="./public/image-1@2x.png" />
+    <img class="image-2-icon" alt="" src="./public/image-1@2x.png" />
+</div>
+  <div class="container">
+    <div class="card">
+      <div class="card_title">
+        <img src="./public/logo-neoris.png" alt="logo-neoris" class="logo-neoris">
+        <h1>Ingresa a tu cuenta</h1>
+        <span>No tienes una cuenta? <a href="./signup.html">Registrate</a></span>
+      </div>
+      <div class="form">
+      <form action="/register" method="post">
+        <input type="email" name="email" placeholder="Correo" id="email" />
+        <input type="password" name="password" placeholder="Contraseña" id="password" />
+        <button>Ingresar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
