@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./signup.css"> <!-- Asegúrate de poner el camino correcto a tu CSS -->
+    <link rel="stylesheet" href="./signup.css">
     <title>Create Account</title>
 </head>
 <body>
   <div class="images-container">
     <img class="image-1-icon" alt="" src="./public/image-1@2x.png" />
     <img class="image-2-icon" alt="" src="./public/image-1@2x.png" />
-</div>
+  </div>
   <div class="container">
     <div class="card">
       <div class="card_title">
@@ -19,17 +19,48 @@
         <span>Ya tienes una cuenta? <a href="./login.html">Ingresa</a></span>
       </div>
       <div class="form">
-      <form action="./home.html" method="get">
-        <input type="text" name="username" id="username" placeholder="Nombre y Apellido" />
-        <input type="email" name="email" placeholder="Correo" id="email" />
-        <input type="password" name="password" placeholder="Contraseña" id="password" />
-        <button>Sign Up</button>
+        <form id="signupForm" action="/api/users" method="post">
+          <input type="text" name="username" id="username" placeholder="Nombre y Apellido" required>
+          <input type="email" name="email" placeholder="Correo" id="email" required>
+          <input type="password" name="password" placeholder="Contraseña" id="password" required>
+          <button type="submit">Sign Up</button>
         </form>
       </div>
       <div class="card_terms">
-          <input type="checkbox" name="" id="terms"> <span>He leído y acepto los <a href="">Términos de Servicio.</a></span>
+          <input type="checkbox" name="" id="terms" required> <span>He leído y acepto los <a href="">Términos de Servicio.</a></span>
       </div>
     </div>
   </div>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get form data
+        const formData = new FormData(this);
+
+        // Send POST request to backend
+        fetch(this.action, {
+            method: this.method,
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(Object.fromEntries(formData))
+        })
+        .then(response => {
+            if (response.ok) {
+                // If user creation is successful, redirect to home page
+                window.location.replace('/home.html');
+            } else {
+                // If user creation fails, show error message
+                alert('Error al registrar el usuario. Inténtalo de nuevo.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error al registrar el usuario. Inténtalo de nuevo.');
+        });
+    });
+  </script>
 </body>
 </html>
