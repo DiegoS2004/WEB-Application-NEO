@@ -45,13 +45,23 @@
             })
             .then(response => {
                 if (response.ok) {
-                    window.location.replace('/home.html'); 
+                    return response.json();
                 } else {
-                    alert('Credenciales incorrectas. Inténtalo de nuevo.'); // Muestra un mensaje de error si las credenciales son incorrectas
+                    throw new Error('Credenciales incorrectas. Inténtalo de nuevo.');
                 }
             })
-            .catch(error => console.error(error));
+            .then(data => {
+                if (data.rol === 'admin') {
+                    window.location.replace('/admin.html');
+                } else {
+                    window.location.replace('/home.html');
+                }
+            })
+            .catch(error => {
+                alert(error.message); // Muestra un mensaje de error si las credenciales son incorrectas
+            });
         });
     </script>
 </body>
 </html>
+
