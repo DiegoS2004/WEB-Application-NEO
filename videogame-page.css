@@ -1,19 +1,12 @@
 html, body {
   height: 100%;
-html, body {
-  height: 100%;
   margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, sans-serif; /* Uso global del tipo de fuente */
   padding: 0;
   display: flex;
   flex-direction: column;
   font-family: Arial, sans-serif; /* Uso global del tipo de fuente */
 }
 
-/* Estilos de la barra de navegación */
 /* Estilos de la barra de navegación */
 .nav-bar {
   height: 15%; /* 15% del total de la altura de la vista */
@@ -37,26 +30,15 @@ html, body {
   padding: 0;
   margin: 0; /* Asegurar que no hay margen extra */
   width: 100%;
-  margin: 0; /* Asegurar que no hay margen extra */
-  width: 100%;
 }
 
 .nav-bar--middle {
   padding: 5px 0;
-  padding: 5px 0;
   cursor: pointer;
-  width: 100%;
   width: 100%;
   text-align: center;
 }
 
-/* Contenedor del juego */
-.videogame-container {
-  height: 70%; /* 70% del total de la altura de la vista */
-  overflow: hidden;
-}
-
-iframe {
 /* Contenedor del juego */
 .videogame-container {
   height: 70%; /* 70% del total de la altura de la vista */
@@ -84,13 +66,9 @@ iframe {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .footer-logo {
-  width: 150px;
-  margin-bottom: 20px;
   width: 150px;
   margin-bottom: 20px;
 }
@@ -99,14 +77,9 @@ iframe {
   list-style: none;
   padding: 0;
   margin: 0;
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .footer-links li {
-  display: inline;
-  margin: 0 10px;
   display: inline;
   margin: 0 10px;
 }
@@ -127,24 +100,12 @@ footer p {
 }
 
 /* Ajustes para pantallas más grandes */
-  font-size: 0.875rem;
-  margin-top: 10px;
-}
-
-/* Ajustes para pantallas más grandes */
 @media (min-width: 768px) {
   .nav-bar {
     flex-direction: row;
     justify-content: space-between;
-    flex-direction: row;
-    justify-content: space-between;
   }
 
-  .nav-bar--lista {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin: 0;
   .nav-bar--lista {
     display: flex;
     flex-direction: row;
@@ -154,6 +115,6 @@ footer p {
 
   .nav-bar--middle {
     padding: 0 10px;
-    width: auto;
-  }
+    width: auto;
+  }
 }
