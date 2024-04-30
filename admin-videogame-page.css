@@ -1,0 +1,119 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif; /* Uso global del tipo de fuente */
+}
+
+/* Estilos de la barra de navegación */
+.nav-bar {
+  height: 15%; /* 15% del total de la altura de la vista */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centrado de contenido en la barra de navegación */
+  background-color: #1B242A; /* Color de fondo */
+  padding: 10px 20px;
+  color: white;
+  text-align: center;
+}
+
+.nav-bar img {
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Asegurar que no hay margen extra */
+  width: 100%;
+}
+
+.nav-bar--middle {
+  padding: 5px 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Contenedor del juego */
+.videogame-container {
+  height: 70%; /* 70% del total de la altura de la vista */
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Estilos del footer */
+.site-footer {
+  height: 15%; /* 15% del total de la altura de la vista */
+  background-color: var(--color-gray-400);
+  color: white;
+  padding: var(--padding-base);
+  text-align: center;
+  position: relative; /* Quitamos 'fixed' para integrarlo al flujo normal */
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #f1c40f;
+}
+
+footer p {
+  font-size: 0.875rem;
+  margin-top: 10px;
+}
+
+/* Ajustes para pantallas más grandes */
+@media (min-width: 768px) {
+  .nav-bar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-bar--lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0;
+  }
+
+  .nav-bar--middle {
+    padding: 0 10px;
+    width: auto;
+  }
+}
