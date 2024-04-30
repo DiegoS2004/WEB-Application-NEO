@@ -20,37 +20,28 @@ body {
     background-color: var(--neoris-blue);
   }
 
-  /* Estilos de la barra de navegación */
-.nav-bar {
-    height: auto; /* 15% del total de la altura de la vista */
+  .nav-bar {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; /* Centrado de contenido en la barra de navegación */
-    background-color: #1B242A; /* Color de fondo */
+    justify-content: space-between;
     padding: 10px 20px;
+    background-color: #1B242A;
     color: white;
-    text-align: center;
-  }
-  
-  .nav-bar img {
+}
+
+.nav-bar img {
     height: 50px;
-    margin-bottom: 10px;
-  }
-  
-  .nav-bar ul {
-    list-style-type: none;
+}
+
+.nav-bar--lista {
+    display: flex;
+    list-style: none;
     padding: 0;
-    margin: 0; /* Asegurar que no hay margen extra */
-    width: 100%;
-  }
-  
-  .nav-bar--middle {
-    padding: 5px 0;
+}
+
+.nav-bar--middle {
+    padding: 10px;
     cursor: pointer;
-    width: 100%;
-    text-align: center;
-  }
+}
 
 .course-container {
     padding: 20px;
@@ -98,8 +89,6 @@ body {
 
 .course-details {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-around;
     padding: 20px;
     border-radius: 8px;
@@ -108,11 +97,10 @@ body {
 .detail-box {
     background-color: white;
     text-align: center;
-    padding: 5px;
-    margin: 10px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    width: 50%; /* Distribuye equitativamente el espacio entre las cajas */
+    width: 30%; /* Distribuye equitativamente el espacio entre las cajas */
 }
 
 .icon-container {
@@ -142,6 +130,7 @@ body {
 }
 .course-main-content {
     display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
     gap: 20px; /* Espacio entre las columnas */
     padding: 20px;
     background-color: #f8f9fa; /* Un fondo claro */
@@ -251,44 +240,5 @@ input[type="file"] {
   /* Mejorar legibilidad y accesibilidad */
   footer p {
     font-size: 0.875rem; /* Tamaño del texto de los derechos */
-    margin-top: 10px; /* Espacio antes del texto de derechos */
-  }
-
-  @media (min-width: 768px) {
-    .nav-bar {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-  
-    .nav-bar .nav-bar--lista{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        width: auto;
-
-    }
-  
-    .nav-bar--middle {
-        padding: 0 10px; /* Restaura el espaciado horizontal y elimina el vertical */
-        width: auto; /* Restablece el ancho para auto ajustarse al contenido */
-    }
-  
-    .search {
-        margin: 0px; /* Elimina el margen superior */
-    }
-    .course-details {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 20px;
-        border-radius: 8px;
-    }
-    .course-main-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
-        gap: 20px; /* Espacio entre las columnas */
-        padding: 20px;
-        background-color: #f8f9fa; /* Un fondo claro */
-    }
-  }
+    margin-top: 10px; /* Espacio antes del texto de derechos */
+  }

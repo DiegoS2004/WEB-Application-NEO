@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./signup.css">
+    <title>Create Account</title>
+</head>
+<body>
+  <div class="images-container">
+    <img class="image-1-icon" alt="" src="./public/image-1@2x.png" />
+    <img class="image-2-icon" alt="" src="./public/image-1@2x.png" />
+  </div>
+  <div class="container">
+    <div class="card">
+      <div class="card_title">
+        <img src="./public/icon-dark-1@2x.png" alt="logo-neoris" class="logo-neoris">
+        <h1>Create Account</h1>
+        <span>Ya tienes una cuenta? <a href="./login.html">Ingresa</a></span>
+      </div>
+      <div class="form">
+        <form id="signupForm" action="/api/users" method="post">
+          <input type="text" name="name" placeholder="Nombre y Apellido" required>
+          <input type="email" name="email" placeholder="Correo" required>
+          <input type="password" name="password" placeholder="Contraseña" required>
+          <button type="submit">Registrarse</button>
+      </form>
+      
+      
+      </div>
+      <div class="card_terms">
+        <input type="checkbox" name="" id="terms" required> <span>He leído y acepto los <a href="#">Términos de Servicio.</a></span>
+    </div>
+    </div>
+  </div>
+
+  <script>
+document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevenir el envío del formulario por defecto
+
+    const formData = new FormData(this); // Obtener los datos del formulario
+
+    fetch(this.action, {
+    method: this.method,
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(Object.fromEntries(formData))
+})
+.then(response => {
+    if (response.ok) {
+        // Si la respuesta es satisfactoria, hacer algo
+    } else {
+        // Si la respuesta no es satisfactoria, manejar el error
+        throw new Error('Error en la solicitud');
+    }
+})
+.catch(error => {
+    console.error('Error:', error);
+    alert('Error al enviar los datos al servidor');
+});
+
+
+  </script>
+</body>
+</html>

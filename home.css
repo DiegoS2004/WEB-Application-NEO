@@ -1,0 +1,184 @@
+/* Estilos básicos */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos de la barra de navegación, enfoque Mobile First */
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1B242A; /* Azul por ejemplo */
+  padding: 10px 20px;
+  color: white;
+  text-align: center;
+}
+
+.nav-bar img {
+  height: 50px; /* Ajusta según necesidad */
+  margin-bottom: 10px; /* Espacio después del logo */
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  padding: 0;
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.nav-bar--middle {
+  padding: 5px 0; /* Espacio arriba y abajo para mejorar la tocabilidad */
+  cursor: pointer;
+  width: 100%; /* Hace que cada elemento de la lista ocupe todo el ancho */
+  text-align: center;
+}
+
+.search {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Media queries para pantallas más grandes */
+@media (min-width: 768px) {
+  .nav-bar {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .nav-bar .nav-bar--lista{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: auto;
+  }
+
+  .nav-bar--middle {
+      padding: 0 10px; /* Restaura el espaciado horizontal y elimina el vertical */
+      width: auto; /* Restablece el ancho para auto ajustarse al contenido */
+  }
+
+  .search {
+      margin: 0px; /* Elimina el margen superior */
+  }
+}
+
+
+/* Cursos */
+
+/* Estilos básicos */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Fondo claro para el cuerpo */
+}
+
+/* Sección de cursos */
+.course-section {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Fila de cursos */
+.course-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%; /* Se adapta al tamaño de la pantalla */
+}
+
+/* Tarjeta de curso */
+.course-card {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  margin: 10px;
+  width: calc(33.333% - 20px); /* Tres tarjetas por fila con márgenes */
+  overflow: hidden;
+  text-align: center;
+}
+
+.course-image {
+  width: 100%; /* Ajusta la imagen para cubrir el ancho de la tarjeta */
+  border-radius: 5px;
+  height: auto;
+  display: block; /* Elimina cualquier espacio debajo de la imagen */
+}
+
+.course-rating {
+  width: 100px; /* Tamaño fijo para las estrellas */
+  margin: 0 auto; /* Centra las estrellas horizontalmente */
+}
+
+figcaption {
+  padding: 10px;
+  color: black; /* Texto blanco */
+  font-size: 1.1em;
+}
+
+figure{
+  margin-bottom: 0px;
+}
+
+/* Media queries para adaptar a móviles */
+@media (max-width: 768px) {
+  .course-card {
+      width: calc(50% - 20px); /* Dos tarjetas por fila en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  .course-card {
+      width: 100%; /* Una tarjeta por fila en pantallas muy pequeñas */
+  }
+}
+
+
+/* Footer */
+
+.site-footer {
+  background-color: #1B242A; /* Oscuro para el fondo del footer, igual al navbar */
+  color: #ffffff; /* Texto blanco para contraste */
+  padding: 20px 0; /* Padding arriba y abajo */
+  text-align: center; /* Centrar contenido */
+  font-family: 'Plus Jakarta Sans', sans-serif; /* Fuente consistente con el resto del sitio */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto; /* Centrado horizontal */
+  padding: 0 20px; /* Padding lateral */
+}
+
+.footer-logo {
+  width: 150px; /* Tamaño del logo */
+  margin-bottom: 20px; /* Espacio debajo del logo */
+}
+
+.footer-links {
+  list-style: none; /* Remover estilos de lista */
+  padding: 0; /* Remover padding */
+  margin-bottom: 20px; /* Espacio debajo de la lista */
+}
+
+.footer-links li {
+  display: inline; /* Mostrar enlaces en línea */
+  margin: 0 10px; /* Espacio horizontal entre enlaces */
+}
+
+.footer-links a {
+  color: #ffffff; /* Color del enlace */
+  text-decoration: none; /* No subrayado */
+  transition: color 0.3s; /* Transición suave al cambiar de color */
+}
+
+.footer-links a:hover {
+  color: #f1c40f; /* Color cuando se pasa el ratón por encima */
+}
+
+/* Mejorar legibilidad y accesibilidad */
+footer p {
+  font-size: 0.875rem; /* Tamaño del texto de los derechos */
+  margin-top: 10px; /* Espacio antes del texto de derechos */
+}
