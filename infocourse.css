@@ -203,42 +203,43 @@ input[type="file"] {
     padding: 20px 0; /* Padding arriba y abajo */
     text-align: center; /* Centrar contenido */
     font-family: 'Plus Jakarta Sans', sans-serif; /* Fuente consistente con el resto del sitio */
-  }
+}
   
-  .footer-content {
+
+.footer-content {
     max-width: 1200px;
     margin: 0 auto; /* Centrado horizontal */
     padding: 0 20px; /* Padding lateral */
-  }
+}
   
-  .footer-logo {
+.footer-logo {
     width: 150px; /* Tamaño del logo */
     margin-bottom: 20px; /* Espacio debajo del logo */
-  }
+}
   
-  .footer-links {
+.footer-links {
     list-style: none; /* Remover estilos de lista */
     padding: 0; /* Remover padding */
     margin-bottom: 20px; /* Espacio debajo de la lista */
-  }
+}
   
-  .footer-links li {
+.footer-links li {
     display: inline; /* Mostrar enlaces en línea */
     margin: 0 10px; /* Espacio horizontal entre enlaces */
-  }
+}
   
-  .footer-links a {
+.footer-links a {
     color: #ffffff; /* Color del enlace */
     text-decoration: none; /* No subrayado */
     transition: color 0.3s; /* Transición suave al cambiar de color */
-  }
+}
   
-  .footer-links a:hover {
+.footer-links a:hover {
     color: #f1c40f; /* Color cuando se pasa el ratón por encima */
-  }
+}
   
   /* Mejorar legibilidad y accesibilidad */
-  footer p {
+footer p {
     font-size: 0.875rem; /* Tamaño del texto de los derechos */
     margin-top: 10px; /* Espacio antes del texto de derechos */
-  }
+}
