@@ -1,0 +1,244 @@
+:root {
+    --light: #f6f6f9;
+    --primary: #1976d2;
+    --light-primary: #cfe8ff;
+    --grey: #eee;
+    --dark-grey: #aaaaaa;
+    --dark: #363949;
+    --danger: #d32f2f;
+    --light-danger: #fecdd3;
+    --warning: #fbc02d;
+    --light-warning: #fff2c6;
+    --success: #388e3c;
+    --light-success: #bbf7d0;
+    --neoris: #1B242A;
+    --neoris-blue: #89D2E6;
+  }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--neoris-blue);
+  }
+
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #1B242A;
+    color: white;
+}
+
+.nav-bar img {
+    height: 50px;
+}
+
+.nav-bar--lista {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-bar--middle {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.course-container {
+    padding: 20px;
+    text-align: center;
+    background-color: #f5f5f5; /* Fondo claro para el área del curso */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil */
+    max-width: 600px; /* Controla el ancho máximo del contenedor */
+    margin: 20px auto; /* Centrado y con margen */
+}
+
+.course-title {
+    font-size: 28px; /* Tamaño más grande */
+    color: #333; /* Color más oscuro para más contraste */
+    margin-bottom: 5px; /* Espaciado entre título y descripción */
+    font-weight: bold; /* Fuente en negrita */
+}
+
+.course-description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px; /* Espaciado antes de la calificación */
+}
+
+.course-rating {
+    font-size: 18px; /* Tamaño más visible para la calificación */
+    color: #FFD700; /* Color dorado para las estrellas */
+    margin-bottom: 15px; /* Espaciado antes del botón */
+}
+
+.start-course-button {
+    padding: 10px 20px; /* Padding generoso para mejorar la tocabilidad */
+    font-size: 16px; /* Tamaño de fuente legible */
+    color: white; /* Texto blanco */
+    background-color: #4CAF50; /* Verde atractivo para acción */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados en el botón */
+    cursor: pointer; /* Cursor en forma de mano para indicar clickeable */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+.start-course-button:hover {
+    background-color: #45a049; /* Un verde más oscuro al pasar el ratón */
+}
+
+.course-details {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.detail-box {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 30%; /* Distribuye equitativamente el espacio entre las cajas */
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.detail-box i {
+    color: var(--neoris);
+    font-size: 32px; /* Tamaño grande para los iconos */
+}
+
+.detail-title {
+    color: var(--neoris);
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.detail-box p {
+    color: var(--neoris);
+    font-size: 16px;
+}
+.course-main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas de igual tamaño */
+    gap: 20px; /* Espacio entre las columnas */
+    padding: 20px;
+    background-color: #f8f9fa; /* Un fondo claro */
+}
+
+.course-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-content h2,
+.upload-evidence h2 {
+    color: var(--neoris);
+    margin-bottom: 10px;
+}
+
+.course-content ol {
+    counter-reset: item;
+    list-style-type: none;
+    padding: 0;
+}
+
+.course-content ol li {
+    counter-increment: item;
+    margin-bottom: 10px;
+}
+
+.course-content ol li:before {
+    content: counter(item) ". ";
+    font-weight: bold;
+    color: var(--neoris);
+}
+
+.upload-evidence {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+input[type="file"] {
+    display: none; /* Oculta el input estándar */
+}
+
+.custom-file-upload {
+    background-color: var(--neoris-blue);
+    display: inline-block;
+    padding: 12px 24px;
+    cursor: pointer;
+    color: white;
+    border-radius: 8px;
+    margin-top: 10px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.custom-file-upload:hover {
+    background-color: var(--neoris);
+    color: white;
+}
+
+/* Footer */
+
+.site-footer {
+    background-color: #1B242A; /* Oscuro para el fondo del footer, igual al navbar */
+    color: #ffffff; /* Texto blanco para contraste */
+    padding: 20px 0; /* Padding arriba y abajo */
+    text-align: center; /* Centrar contenido */
+    font-family: 'Plus Jakarta Sans', sans-serif; /* Fuente consistente con el resto del sitio */
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 0 20px; /* Padding lateral */
+  }
+  
+  .footer-logo {
+    width: 150px; /* Tamaño del logo */
+    margin-bottom: 20px; /* Espacio debajo del logo */
+  }
+  
+  .footer-links {
+    list-style: none; /* Remover estilos de lista */
+    padding: 0; /* Remover padding */
+    margin-bottom: 20px; /* Espacio debajo de la lista */
+  }
+  
+  .footer-links li {
+    display: inline; /* Mostrar enlaces en línea */
+    margin: 0 10px; /* Espacio horizontal entre enlaces */
+  }
+  
+  .footer-links a {
+    color: #ffffff; /* Color del enlace */
+    text-decoration: none; /* No subrayado */
+    transition: color 0.3s; /* Transición suave al cambiar de color */
+  }
+  
+  .footer-links a:hover {
+    color: #f1c40f; /* Color cuando se pasa el ratón por encima */
+  }
+  
+  /* Mejorar legibilidad y accesibilidad */
+  footer p {
+    font-size: 0.875rem; /* Tamaño del texto de los derechos */
+    margin-top: 10px; /* Espacio antes del texto de derechos */
+  }
