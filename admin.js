@@ -45,6 +45,59 @@ searchbtn.addEventListener("click", function (e) {
   }
 });
 
+
+  // admin.js
+
+  // Realizar la solicitud a la API para obtener el número de usuarios
+  fetch('http://localhost:1500/api/users/count')
+  .then(response => response.json())
+  .then(data => {
+    // Actualizar el contenido del elemento con el id "numUsuarios" con el número de usuarios recibidos de la API
+    document.getElementById('numUsuarios').innerText = data.count;
+  })
+  .catch(error => {
+    console.error('Error al obtener los datos:', error);
+  });
+  
+  // Realizar la solicitud a la API para obtener la lista de usuarios
+fetch('http://localhost:1500/api/users')
+.then(response => response.json())
+.then(data => {
+  // Obtener la tabla de usuarios
+  const tablaUsuarios = document.querySelector('.bottom_data .orders table tbody');
+
+  // Limpiar cualquier contenido existente en la tabla
+  tablaUsuarios.innerHTML = '';
+
+  // Iterar sobre los datos de los usuarios y crear filas de tabla para cada uno
+  data.forEach(usuario => {
+    // Crear una nueva fila de tabla
+    const fila = document.createElement('tr');
+
+    // Agregar las celdas para el ID, nombre y correo electrónico del usuario
+    fila.innerHTML = `
+      <td>${usuario._id}</td>
+      <td class="img_content">
+        <img src="./public/avatar-1.jpeg" alt="" />
+        <p>${usuario.name}</p>
+      </td>
+      <td>${usuario.email}</td>
+      <td>${usuario.rol}</td>
+      <td></span></td>
+    `;
+
+    // Agregar la fila a la tabla de usuarios
+    tablaUsuarios.appendChild(fila);
+  });
+})
+.catch(error => {
+  console.error('Error al obtener los datos de los usuarios:', error);
+});
+
+
+
+
+
 // resize
 window.addEventListener("resize", () => {
   if (window.innerWidth < 768) {
@@ -101,7 +154,7 @@ const labels = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'];
 const data = {
   labels: labels,
   datasets: [{
-    label: 'Usuarios activos',
+    label: 'conexiones activos',
     data: [65, 59, 80, 81, 56, 55, 40],
     backgroundColor: [
       'rgba(255, 99, 132, 0.2)',
@@ -138,5 +191,7 @@ const config = {
   };
 new Chart(usuarios,config);
 
+  // Llama a la función al cargar la página
+  obtenerNumeroUsuarios();
 
  
