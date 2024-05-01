@@ -22,26 +22,41 @@ body {
 
   .nav-bar {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1B242A; /* Azul por ejemplo */
     padding: 10px 20px;
-    background-color: #1B242A;
     color: white;
-}
-
-.nav-bar img {
-    height: 50px;
-}
-
-.nav-bar--lista {
-    display: flex;
-    list-style: none;
+    text-align: center;
+  }
+  
+  .nav-bar img {
+    height: 50px; /* Ajusta según necesidad */
+    margin-bottom: 10px; /* Espacio después del logo */
+  }
+  
+  .nav-bar ul {
+    list-style-type: none;
     padding: 0;
-}
-
-.nav-bar--middle {
-    padding: 10px;
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+  
+  .nav-bar--middle {
+    padding: 5px 0; /* Espacio arriba y abajo para mejorar la tocabilidad */
     cursor: pointer;
-}
+    width: 100%; /* Hace que cada elemento de la lista ocupe todo el ancho */
+    text-align: center;
+  }
+  
+  .nav-bar ul a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav-bar ul a:hover{
+    color: #aaaaaa;
+  }
+  
 
 .course-container {
     padding: 20px;
@@ -243,3 +258,25 @@ footer p {
     font-size: 0.875rem; /* Tamaño del texto de los derechos */
     margin-top: 10px; /* Espacio antes del texto de derechos */
 }
+
+/* Media queries para pantallas más grandes */
+@media (min-width: 768px) {
+    .nav-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+  
+    .nav-bar .nav-bar--lista{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: auto;
+    }
+  
+    .nav-bar--middle {
+        padding: 0 10px; /* Restaura el espaciado horizontal y elimina el vertical */
+        width: auto; /* Restablece el ancho para auto ajustarse al contenido */
+    }
+  
+  }

@@ -1,0 +1,247 @@
+:root {
+    --light: #f6f6f9;
+    --primary: #1976d2;
+    --light-primary: #cfe8ff;
+    --grey: #eee;
+    --dark-grey: #aaaaaa;
+    --dark: #363949;
+    --danger: #d32f2f;
+    --light-danger: #fecdd3;
+    --warning: #fbc02d;
+    --light-warning: #fff2c6;
+    --success: #388e3c;
+    --light-success: #bbf7d0;
+    --neoris: #1B242A;
+    --neoris-blue: #89D2E6;
+  }
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+}
+/* Estilos de la barra de navegación, enfoque Mobile First */
+.nav-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1B242A; /* Azul por ejemplo */
+    padding: 10px 20px;
+    color: white;
+    text-align: center;
+  }
+  
+  .nav-bar img {
+    height: 50px; /* Ajusta según necesidad */
+    margin-bottom: 10px; /* Espacio después del logo */
+  }
+  
+  .nav-bar ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%; /* Ocupa todo el ancho disponible */
+  }
+  
+  .nav-bar ul a{
+    text-decoration: none;
+    color: white;
+  }
+
+  .nav-bar ul a:hover{
+    color: #aaaaaa;
+  }
+
+  .nav-bar--middle {
+    padding: 5px 0; /* Espacio arriba y abajo para mejorar la tocabilidad */
+    cursor: pointer;
+    width: 100%; /* Hace que cada elemento de la lista ocupe todo el ancho */
+    text-align: center;
+  }
+  
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile-column {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.profile-image {
+    width: 110px; 
+    height: 100px;
+    border-radius: 100%;
+}
+
+.profile-button{
+    color: white;
+    background-color: var(--neoris);
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 25px;
+}
+
+.profile-info{
+    width: 100%;
+}
+.profile-info h1, .profile-info h2, .user-description h2, .curso-info h2{
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+
+.profile-info p{
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.user-description p{
+    font-size: 15px;
+}
+
+.curso-info li{
+    font-size: 15px;
+}
+
+.user-description, .curso-info {
+    border: 1px solid #eeeeee;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.curso-info ul{
+    padding: 0px;
+    list-style: none;
+}
+
+.content-column {
+    flex-grow: 1;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.grid-row {
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.grid-item img {
+    max-width: 50%;
+    height: auto;
+}
+
+.content-column-title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+/* Footer */
+
+.site-footer {
+    background-color: #1B242A; /* Oscuro para el fondo del footer, igual al navbar */
+    color: #ffffff; /* Texto blanco para contraste */
+    padding: 20px 0; /* Padding arriba y abajo */
+    text-align: center; /* Centrar contenido */
+    font-family: 'Plus Jakarta Sans', sans-serif; /* Fuente consistente con el resto del sitio */
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 0 20px; /* Padding lateral */
+  }
+  
+  .footer-logo {
+    width: 150px; /* Tamaño del logo */
+    margin-bottom: 20px; /* Espacio debajo del logo */
+  }
+  
+  .footer-links {
+    list-style: none; /* Remover estilos de lista */
+    padding: 0; /* Remover padding */
+    margin-bottom: 20px; /* Espacio debajo de la lista */
+  }
+  
+  .footer-links li {
+    display: inline; /* Mostrar enlaces en línea */
+    margin: 0 10px; /* Espacio horizontal entre enlaces */
+  }
+  
+  .footer-links a {
+    color: #ffffff; /* Color del enlace */
+    text-decoration: none; /* No subrayado */
+    transition: color 0.3s; /* Transición suave al cambiar de color */
+  }
+  
+  .footer-links a:hover {
+    color: #f1c40f; /* Color cuando se pasa el ratón por encima */
+  }
+  
+  /* Mejorar legibilidad y accesibilidad */
+  footer p {
+    font-size: 0.875rem; /* Tamaño del texto de los derechos */
+    margin-top: 10px; /* Espacio antes del texto de derechos */
+  }
+
+  /* Media queries para pantallas más grandes */
+  @media (min-width: 768px) {
+    .nav-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+  
+    .nav-bar .nav-bar--lista{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: auto;
+    }
+  
+    .nav-bar--middle {
+        padding: 0 10px; /* Restaura el espaciado horizontal y elimina el vertical */
+        width: auto; /* Restablece el ancho para auto ajustarse al contenido */
+    }
+  
+    .search {
+        margin: 0px; /* Elimina el margen superior */
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 100vh;
+    }
+  }
