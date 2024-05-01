@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="login.css"> 
+    <link rel="stylesheet" href="index.css"> 
 </head>
 <body>
     <div class="images-container">
@@ -36,7 +36,7 @@
                 email: formData.get('email'),
                 password: formData.get('password')
             };
-            fetch('http://localhost:1500/api/users/login', {
+            fetch('https://neorisdb.onrender.com/api/users/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
