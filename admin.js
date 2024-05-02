@@ -78,8 +78,7 @@ fetch('http://localhost:1500/api/users')
     fila.innerHTML = `
       <td>${usuario._id}</td>
       <td class="img_content">
-        <img src="./public/avatar-1.jpeg" alt="" />
-        <p>${usuario.name}</p>
+        <p>${usuario.name}</p>  
       </td>
       <td>${usuario.email}</td>
       <td>${usuario.rol}</td>
