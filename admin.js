@@ -60,7 +60,7 @@ searchbtn.addEventListener("click", function (e) {
   });
   
   // Realizar la solicitud a la API para obtener la lista de usuarios
-fetch('http://localhost:1500/api/users')
+fetch('https://neorisdb.onrender.com/api/users')
 .then(response => response.json())
 .then(data => {
   // Obtener la tabla de usuarios
