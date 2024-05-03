@@ -49,7 +49,7 @@ searchbtn.addEventListener("click", function (e) {
   // admin.js
 
   // Realizar la solicitud a la API para obtener el número de usuarios
-  fetch('http://localhost:1500/api/users/count')
+  fetch('https://neorisdb.onrender.com/api/users/count')
   .then(response => response.json())
   .then(data => {
     // Actualizar el contenido del elemento con el id "numUsuarios" con el número de usuarios recibidos de la API
